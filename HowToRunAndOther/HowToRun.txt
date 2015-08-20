@@ -1,0 +1,38 @@
+Witam.
+
+Aby uruchomiæ zadanie 4 , mianowicie to co napisalem i w pelni przetestowalem nalezy wejœæ do paczki
+System.Tests.Managers.Unit -> SOTest ->
+
+A nastêpnie uruchomiæ tylko i wy³¹cznie pojedynczo testy ( jakieœ zale¿noœci ,których nie wyj¹³em ).
+testSO_SJF_Schedule_LRU_Paging_Equals_Framing_Ex4
+testSO_SJF_Schedule_LRU_Paging_Proportional_Framing_Ex4
+
+Zrobi³em testy dla ci¹gu danych wygenerowanych samodzielnie , zachowuj¹c zasadê lokalnoœci odwo³añ.
+
+Z grubsza jak to wszystko dzia³a :
+1) Set& Settings:
+- kazdy Manager ( VMM , ProcessManager, SO ) potrzebuje odpowiednich danych wejsciowych
+2) Run:
+- zrobione:
+ProcessManager Dostaje kolejke procesów, jest ona szeregowana , alokowana na procesorach ... patrz kod
+Potem Kazdy Process zostaje wys³any do VMM( Virtual Memory Manager ), gdzie na jego ramkach wykonywany jest 
+swapping in , swapping out
+itp itd.
+- do zrobienia:
+-naprawiæ RR
+-zrobiæ aby g³owna pêtla programu by³a wykonywana w managerze SO a nie w ProcessManagerze
+- usun¹æ ify
+- konczenie na czas
+
+3) Metody informatyczne u¿ywane przy tworzeniu biblioteki, które stara³em siê opanowaæ
+- Sprinty 4 dni -> 30 minut
+- Unit Testy
+- Integracyjne Testy
+- Tablica Kanban
+- User Stories
+
+4) Wiekszosc informacji by³o czerpane z ksi¹¿ki Abrachama Silver...shafca.
+
+5) Moj blog : https://trunkbtnet.wordpress.com/
+
+6) Dziêkujê za porady i ¿ycze powodzenia :)
